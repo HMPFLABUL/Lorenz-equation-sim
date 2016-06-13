@@ -63,4 +63,9 @@ public class Input : MonoBehaviour {
         b.value = 2.667f;
     }
 
+    public void EXIT()
+    {
+        Application.Quit();
+    }
+
 }
