@@ -20,14 +20,14 @@ public class Input : MonoBehaviour {
 
     private void CheckSlidersValue()
     {
-        Data.Rho = (double)((int)(r.value * 1000)) / 1000;
+        Data.Rho = (double)((int)(r.value * 100)) / 100;
         rT.text = "" + Data.Rho;
         CheckRho();
         Debug.Log(Data.Rho);
         Debug.Log(Data.RhoVal);
-        Data.Sig = (double)((int)(sig.value * 1000)) / 1000;
+        Data.Sig = (double)((int)(sig.value * 100)) / 100;
         sigT.text = "" + Data.Sig;
-        Data.Beta = (double)((int)(b.value * 1000)) / 1000;
+        Data.Beta = (double)((int)(b.value * 100)) / 100;
         bT.text = "" + Data.Beta;
     }
 
@@ -52,7 +52,8 @@ public class Input : MonoBehaviour {
     }
     public void R9996()
     {
-        r.value =99.96f;
+
+        r.value = (float)99.965;
     }
     public void s10()
     {

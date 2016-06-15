@@ -17,10 +17,8 @@ public class Draw : RowXYZ {
     {
         int i = x.Count - 1;
         x.Add(dt * sig * y[i] - dt * sig * x[i] + x[i]);
-        double dy = dt * rho * x[i] - z[i] * x[i] * dt - y[i] * dt + y[i];
-        y.Add(dy);
-        double dz = x[i] * y[i] * dt - b * z[i] * dt + z[i];
-        z.Add(dz);
+        y.Add(dt * rho * x[i] - z[i] * x[i] * dt - y[i] * dt + y[i]);
+        z.Add(x[i] * y[i] * dt - b * z[i] * dt + z[i]);
         pos[i] = new Vector3((float)x[i], (float)z[i], (float)y[i]);
     }
 
